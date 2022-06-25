@@ -1,85 +1,92 @@
-
 public class wallet {
-    private int penny, nickel, dime, quarter;
-    private int dollar, five, ten, twenty, fifty, oneHundred;
-    public static void main(int[] args) {
-
+    private double penny, nickel, dime, quarter;
+    private double dollar, five, ten, twenty, fifty, oneHundred;
+    public static void main(String[] args) {
+        wallet wa = new wallet();
+        wa.getDime();                
     }
     //default constructor
     public wallet() {
-
+        setPenny(0.01);
+        setNickel(0.05);
+        setDime(0.10);
+        setQuarter(0.25);
+        setDollar(1.00);
+        setfive(5.00);
+        setTen(10.00);
+        setTwenty(20.00);
+        setFifty(50.00);
+        setOneHundred(100.00);
     }
-
+    
     //addMoney function
-    public void addMoney() {
-
+    public static double addMoney(double n1, double n2) {
+        return n1+n2; 
     }
     //spendMoney function
     public double spendMoney() {
         return spendMoney();
     }
 
-
-
     //setters and getters
-    public int getPenny() {
+    public double getPenny() {
         return penny;
     }
-    public void setPenny(int penny) {
+    public void setPenny(double penny) {
         this.penny = penny;
     }
-    public int getNickel() {
+    public double getNickel() {
         return nickel;
     }
-    public void setNickel(int nickel) {
+    public void setNickel(double nickel) {
         this.nickel = nickel;
     }
-    public int getDime() {
+    public double getDime() {
         return dime;
     }
-    public void setDime(int dime) {
+    public void setDime(double dime) {
         this.dime = dime;
     }
-    public int getQuater() {
+    public double getQuater() {
         return quarter;
     }
-    public void setQuarter(int quarter) {
+    public void setQuarter(double quarter) {
         this.quarter = quarter;
     }
-    public int getDollar() {
+    public double getDollar() {
         return dollar;
     }
-    public void setDollar(int dollar) {
+    public void setDollar(double dollar) {
         this.dollar = dollar;
     }
-    public int getFive() {
+    public double getFive() {
         return five;
     }
-    public void setfive(int five) {
+    public void setfive(double five) {
         this.five = five;
     }
-    public int getTen() {
+    public double getTen() {
         return ten;
     }
-    public void setTen(int ten) {
+    public void setTen(double ten) {
         this.ten = ten;
     }
-    public int getTwenty() {
+    public double getTwenty() {
         return twenty;
     }
-    public void setTwenty(int twenty) {
+    public void setTwenty(double twenty) {
         this.twenty = twenty;
     }
-    public int getFifty() {
+    public double getFifty() {
         return fifty;
     }
-    public void setFifty(int fifty) {
+    public void setFifty(double fifty) {
         this.fifty = fifty;
     }
-    public int getoneHundred() {
+    public double getOneHundred() {
         return oneHundred;
     }
-    public void setgetoneHundred(int oneHundred) {
+    public void setOneHundred(double oneHundred) {
         this.oneHundred = oneHundred;
     }
     /*

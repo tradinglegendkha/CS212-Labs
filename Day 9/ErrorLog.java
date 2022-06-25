@@ -8,7 +8,6 @@ import java.util.logging.SimpleFormatter;
 public class ErrorLog {
 	public Logger logger;
 	private FileHandler fh;
-	 sgsdg
 	public ErrorLog(String className)
 	{
 		logger = Logger.getLogger(className);
