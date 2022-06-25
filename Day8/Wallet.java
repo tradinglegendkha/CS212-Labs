@@ -1,14 +1,21 @@
 package Day8;
+import java.util.Set;
 
 public class Wallet {
     private double penny, nickel, dime, quarter;
     private double dollar, five, ten, twenty, fifty, oneHundred;
+    private double wallet, add; 
     public static void main(String[] args) {
         Wallet wa = new Wallet();
-                   
+        System.out.println(wa.getFive());
+        System.out.println(wa.addMoney(32));
+        System.out.println(wa.spendMoney(10));
+        System.out.println(wa.wallet);
     }
     //default constructor
     public Wallet() {
+        wallet = 0;
+        
         setPenny(0.01);
         setNickel(0.05);
         setDime(0.10);
@@ -21,16 +28,30 @@ public class Wallet {
         setOneHundred(100.00);
     }
     
-    //addMoney function
-    public static double addMoney(double n1, double n2) {
-        return n1+n2; 
+    //addMoney function, adds money to your wallet 
+    public double addMoney(double add) {
+        System.out.println("Added "+add);
+        return wallet =+ add;
     }
     //spendMoney function
-    public double spendMoney() {
-        return spendMoney();
+    public double spendMoney(double spend) {
+        System.out.println("Spend "+spend);
+        return wallet =- spend;
     }
 
     //setters and getters
+    public double getWallet() {
+        return wallet;
+    }
+    public void setWallet(double wallet) {
+        this.wallet = wallet;
+    }
+    public double getAdd() {
+        return add;
+    }
+    public void setAdd(double add) {
+        this.add = add;
+    }
     public double getPenny() {
         return penny;
     }
