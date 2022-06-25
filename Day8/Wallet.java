@@ -1,12 +1,14 @@
-public class wallet {
+package Day8;
+
+public class Wallet {
     private double penny, nickel, dime, quarter;
     private double dollar, five, ten, twenty, fifty, oneHundred;
     public static void main(String[] args) {
-        wallet wa = new wallet();
-        wa.getDime();                
+        Wallet wa = new Wallet();
+                   
     }
     //default constructor
-    public wallet() {
+    public Wallet() {
         setPenny(0.01);
         setNickel(0.05);
         setDime(0.10);

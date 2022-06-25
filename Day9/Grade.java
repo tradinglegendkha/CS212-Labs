@@ -1,3 +1,4 @@
+package Day9;
 
 public class Grade {
 	
@@ -7,7 +8,7 @@ public class Grade {
 	{
 		grade = 0;
 	}
-	
+	/*
 	public Grade(double grade)
 	{
 		// defining when the exception is thrown, you have to catch it elsewhere
@@ -16,5 +17,6 @@ public class Grade {
 		else
 			this.grade = grade;
 	}
+	 */
 
 }
