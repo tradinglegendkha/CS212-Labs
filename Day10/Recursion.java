@@ -1,4 +1,5 @@
 package Day10;
+import java.text.ParsePosition;
 
 public class Recursion {
 	static void countdown(int n) {
@@ -12,9 +13,20 @@ public class Recursion {
 			countup(n - 1);
 		System.out.println(n);
 	}
+
+	//number 2 power of two
+	static boolean powerTwo(int n) {
+		while(n!=0) {
+			n /= 2;
+			if(Math.sqrt(n)==n) {
+				return true;
+			}	
+		}	
+		return false;
+	}
 	
 	static int summation(int n) {
-		if ( n == 1)
+		if (n == 1)
 			return 1;
 		return n + summation(n-1);
 	}
@@ -31,7 +43,10 @@ public class Recursion {
 		return fibonacci(n - 1) + fibonacci(n -2);
 	}
 	public static void main(String [] args) {
-		System.out.println(fibonacci(46));
+		//System.out.println(fibonacci(46));
+		System.out.println(powerTwo(23));
+		System.out.println(powerTwo(64));
+		System.out.println(powerTwo(25));
 		
 	}
 }

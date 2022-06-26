@@ -4,18 +4,17 @@ import java.util.Set;
 public class Wallet {
     private double penny, nickel, dime, quarter;
     private double dollar, five, ten, twenty, fifty, oneHundred;
-    private double wallet, add; 
+    private double wallet, add, spend; 
     public static void main(String[] args) {
         Wallet wa = new Wallet();
         System.out.println(wa.getFive());
-        System.out.println(wa.addMoney(32));
-        System.out.println(wa.spendMoney(10));
+        System.out.println(wa.addMoney(wa.fifty));
+        System.out.println(wa.wallet);
+        System.out.println(wa.spendMoney(23));
         System.out.println(wa.wallet);
     }
     //default constructor
     public Wallet() {
-        wallet = 0;
-        
         setPenny(0.01);
         setNickel(0.05);
         setDime(0.10);
@@ -30,12 +29,12 @@ public class Wallet {
     
     //addMoney function, adds money to your wallet 
     public double addMoney(double add) {
-        System.out.println("Added "+add);
+        System.out.println("You deposited $"+add);
         return wallet =+ add;
     }
     //spendMoney function
     public double spendMoney(double spend) {
-        System.out.println("Spend "+spend);
+        System.out.println("You spent $"+spend);
         return wallet =- spend;
     }
 
@@ -51,6 +50,12 @@ public class Wallet {
     }
     public void setAdd(double add) {
         this.add = add;
+    }
+    public double getSpend() {
+        return spend;
+    }
+    public void setSpend(double spend) {
+        this.spend = spend;
     }
     public double getPenny() {
         return penny;
