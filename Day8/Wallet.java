@@ -4,13 +4,13 @@ import java.util.Set;
 public class Wallet {
     private double penny, nickel, dime, quarter;
     private double dollar, five, ten, twenty, fifty, oneHundred;
-    private double wallet, add, spend; 
+    private double wallet, amount, add, spend; 
     public static void main(String[] args) {
         Wallet wa = new Wallet();
-        System.out.println(wa.getFive());
-        wa.addMoney(wa.fifty);
-        wa.spendMoney(27);
-        System.out.println("You have: "+wa.wallet);
+        wa.addMoney(5, wa.fifty);
+        wa.spendMoney(3, 27);
+        wa.addMoney(19, wa.quarter);
+        System.out.println("You have: $"+wa.wallet);
     }
     //default constructor
     public Wallet() {
@@ -27,18 +27,18 @@ public class Wallet {
     }
     
     //addMoney function, adds money to your wallet 
-    public double addMoney(double add) {
-        System.out.println("You deposited $"+add);
-        return wallet += add;
+    public double addMoney(double amount, double add) {
+        System.out.println("You deposited $"+amount*add);
+        return wallet += amount*add;
     }
     //spendMoney function
-    public double spendMoney(double spend) {
-        System.out.println("You spent $"+spend);
+    public double spendMoney(double amount, double spend) {
+        System.out.println("You spent $"+amount*spend);
         if (spend>wallet) {
             System.out.println("You don't have enough money");
             return wallet;
         } 
-        return wallet -= spend;
+        return wallet -= amount*spend;
     }
 
     //setters and getters
@@ -47,6 +47,12 @@ public class Wallet {
     }
     public void setWallet(double wallet) {
         this.wallet = wallet;
+    }
+    public double getAmount() {
+        return amount;
+    }
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
     public double getAdd() {
         return add;
