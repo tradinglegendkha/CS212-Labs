@@ -8,10 +8,9 @@ public class Wallet {
     public static void main(String[] args) {
         Wallet wa = new Wallet();
         System.out.println(wa.getFive());
-        System.out.println(wa.addMoney(wa.fifty));
-        System.out.println(wa.wallet);
-        System.out.println(wa.spendMoney(23));
-        System.out.println(wa.wallet);
+        wa.addMoney(wa.fifty);
+        wa.spendMoney(37);
+        System.out.println("You have: "+wa.wallet);
     }
     //default constructor
     public Wallet() {
@@ -30,12 +29,12 @@ public class Wallet {
     //addMoney function, adds money to your wallet 
     public double addMoney(double add) {
         System.out.println("You deposited $"+add);
-        return wallet =+ add;
+        return wallet += add;
     }
     //spendMoney function
     public double spendMoney(double spend) {
         System.out.println("You spent $"+spend);
-        return wallet =- spend;
+        return wallet -= spend;
     }
 
     //setters and getters
