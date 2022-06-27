@@ -9,7 +9,7 @@ public class Wallet {
         Wallet wa = new Wallet();
         System.out.println(wa.getFive());
         wa.addMoney(wa.fifty);
-        wa.spendMoney(37);
+        wa.spendMoney(27);
         System.out.println("You have: "+wa.wallet);
     }
     //default constructor
@@ -34,6 +34,10 @@ public class Wallet {
     //spendMoney function
     public double spendMoney(double spend) {
         System.out.println("You spent $"+spend);
+        if (spend>wallet) {
+            System.out.println("You don't have enough money");
+            return wallet;
+        } 
         return wallet -= spend;
     }
 
