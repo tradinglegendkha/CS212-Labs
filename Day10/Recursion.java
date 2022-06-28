@@ -1,6 +1,3 @@
-package Day10;
-import java.text.ParsePosition;
-
 public class Recursion {
 	static void countdown(int n) {
 		 System.out.println(n);
@@ -16,13 +13,13 @@ public class Recursion {
 
 	//number 2 power of two
 	static boolean powerTwo(int n) {
-		while(n!=0) {
-			n /= 2;
-			if(Math.sqrt(n)==n) {
-				return true;
-			}	
-		}	
-		return false;
+		if(n==1) {
+			return true;
+		}
+		else if (n%2!=0 || n==0) {
+			return false;
+		}
+		return powerTwo(n/2);
 	}
 
 	static void pyramid(int n) {
@@ -56,9 +53,9 @@ public class Recursion {
 	}
 	public static void main(String [] args) {
 		//System.out.println(fibonacci(46));
+		System.out.println(powerTwo(16));
 		System.out.println(powerTwo(23));
 		System.out.println(powerTwo(64));
-		System.out.println(powerTwo(25));
 		pyramid(5);
 		
 	}

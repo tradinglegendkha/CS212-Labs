@@ -12,6 +12,8 @@ Finish that
 
 Lab 10:
 Finished pyramid, need to work on powerTwo
+--done--
 
 Lab 11:
 Added function but can't call it
+--done--
