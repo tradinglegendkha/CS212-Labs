@@ -1,3 +1,5 @@
+package Day10;
+
 public class Recursion {
 	static void countdown(int n) {
 		 System.out.println(n);
@@ -22,18 +24,24 @@ public class Recursion {
 		return powerTwo(n/2);
 	}
 
-	static void pyramid(int n) {
-		for(int i=0; i<n; i++) {
-			for(int j=n-i; j>1; j--) {
-				System.out.print(" ");
-			}
-			for (int j=0; j<i; j++) {
-				System.out.print("* ");
-			}
-			System.out.println();
-		}
+	static void pyramid(int n, int i) {
+		if (n == 0) {
+            return;
+        }
+        for (int j = 0; j < n; j++) {
+            System.out.print("  ");
+        }
+        for (int j = 1; j <= (2 * i -1); j++) {
+            System.out.print("* ");
+        }
+        System.out.print("\n");
+        pyramid(n - 1, i + 1);
 	}
 	
+	public static void pyramid(int n) {
+		pyramid(n, 0);
+	}
+
 	static int summation(int n) {
 		if (n == 1)
 			return 1;
